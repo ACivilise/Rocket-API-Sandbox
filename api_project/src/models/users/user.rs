@@ -1,5 +1,5 @@
+use utoipa::ToSchema;
+use rocket::serde::Serialize;
 
-use serde::Serialize;
-
-#[derive(Serialize)]
+#[derive(Serialize, ToSchema)]
 pub struct User(pub i32, pub String, pub String);
