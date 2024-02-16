@@ -33,7 +33,7 @@ pub async fn get_users(db: &State<PgPool>) -> Option<Json<Vec<User>>> {
 pub async fn insert_user(db: &rocket::State<PgPool>, user_data: rocket::serde::json::Json<UserFormData>) -> Result<(), String> {
     let result = create_user(db.inner(), &user_data.name, user_data.email.as_deref()).await;
     match result {
-        Ok(user) => Ok(()),
+        Ok(_user) => Ok(()),
         Err(e) => Err(format!("Failed to insert user: {}", e)),
     }
 }

@@ -1,18 +1,18 @@
 #[macro_use] extern crate rocket;
 
-use rocket::{routes};
 use sqlx::postgres::PgPoolOptions;
 use utoipa::OpenApi;
 use utoipa_rapidoc::RapiDoc;
 use utoipa_redoc::{Redoc, Servable};
 use utoipa_swagger_ui::SwaggerUi;
+use web::routes::{root, users};
+use std::env;
 
 mod web;
 mod models;
 mod domains;
 
 use models::users::{entities::User, form_datas::UserFormData};
-use web::routes::{root, users};
 
 #[rocket::main]
 async fn main() -> Result<(), rocket::Error> {
@@ -20,15 +20,7 @@ async fn main() -> Result<(), rocket::Error> {
 
     dotenv::dotenv().ok();
 
-    let database_url = std::env::var("DATABASE_URL").expect("DATABASE_URL must be set");
-    let _db_pool = sqlx::postgres::PgPoolOptions::new()
-        .max_connections(5)
-        .connect(&database_url)
-        .await
-        .expect("Failed to create pool.");
-
-        
-    let database_url = std::env::var("DATABASE_URL").expect("DATABASE_URL must be set");
+    let database_url = env::var("DATABASE_URL").expect("DATABASE_URL must be set");
     let db_pool = PgPoolOptions::new()
         .max_connections(5)
         .connect(&database_url)
@@ -47,7 +39,6 @@ async fn main() -> Result<(), rocket::Error> {
         ),
     )]
     struct ApiDoc;
-    
 
     let rocket = rocket::build()
         .manage(db_pool)
