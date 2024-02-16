@@ -16,7 +16,7 @@ use models::users::{entities::User, form_datas::UserFormData};
 
 #[rocket::main]
 async fn main() -> Result<(), rocket::Error> {
-    env_logger::init();
+    // env_logger::init();
 
     dotenv::dotenv().ok();
 

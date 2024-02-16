@@ -15,5 +15,4 @@ utoipa-swagger-ui = { version = "6.0.0", features = ["rocket"] }
 utoipa = { version = "4.2.0", features = ["rocket_extras"] }
 utoipa-redoc = { version = "3.0.0", features = ["rocket"] }
 utoipa-rapidoc = { version = "3.0.0", features = ["rocket"] }
-env_logger = "0.10.0"
 dotenv = "0.15.0"
