@@ -37,6 +37,14 @@ To run the API project, navigate to the `api_project` directory and execute the 
 cargo run
 ```
 
+Once the API project is running, Utoipa generates live documentation for the API endpoints. You can access the API documentation through the following URLs:
+
+GET /redoc
+GET /rapidoc
+GET /swagger-ui/index.html
+GET /api-docs/openapi.json
+These URLs provide different views and formats for exploring and testing the API's endpoints, making it easier to understand and integrate with the backend services.
+
 ### Leptos Project
 
 The `leptos_project` serves as the frontend for your application. Make sure you have the API project running before you start the frontend to ensure they can communicate effectively.

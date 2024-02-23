@@ -1,0 +1,8 @@
+[package]
+name = "rust_htmx_tera_project"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4.0"
+tera = "1.14"
