@@ -3,7 +3,7 @@
 Welcome to the Rust Sandbox! This project serves as a playground for learning and experimenting with Rust functionalities. It consists of two separate Rust projects designed to work together:
 
 - **api_project**: A backend API developed using [Rocket](https://rocket.rs/), a web framework for Rust.
-- **leptos_project**: A frontend website developed with [Leptos](https://leptos.dev/), a modern framework for building web applications in Rust.
+- **rust_htmx_tera_project**: A frontend website developed with [HTMX](https://htmx.org/), [Tera](https://tera.netlify.app/), and [Actix](https://actix.rs/), providing a modern approach to building web applications in Rust.
 
 ## Getting Started
 
@@ -45,18 +45,14 @@ GET /swagger-ui/index.html
 GET /api-docs/openapi.json
 These URLs provide different views and formats for exploring and testing the API's endpoints, making it easier to understand and integrate with the backend services.
 
-### Leptos Project
+Rust HTMX Tera Project
+The rust_htmx_tera_project directory contains the frontend of your application, developed with Actix, Tera, and HTMX. Make sure you have the API project running before you start the frontend to ensure they can communicate effectively.
 
-The `leptos_project` serves as the frontend for your application. Make sure you have the API project running before you start the frontend to ensure they can communicate effectively.
+Setup and Run
+(TODO: Provide specific setup instructions for the Rust HTMX Tera project, such as installing dependencies, building the project, and running it.)
 
-#### Setup and Run
+Contributing
+We welcome contributions to the Rust Sandbox! Whether it's adding new features, fixing bugs, or improving documentation, your help makes this project better for everyone. Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests to us.
 
-(TODO: Provide specific setup instructions for the Leptos project, such as installing dependencies, building the project, and running it.)
-
-## Contributing
-
-We welcome contributions to the Rust Sandbox! Whether it's adding new features, fixing bugs, or improving documentation, your help makes this project better for everyone. Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests to us.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+License
+This project is licensed under the MIT License - see the LICENSE.md file for details.

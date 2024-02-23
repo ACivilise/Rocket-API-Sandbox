@@ -17,7 +17,7 @@ If you have questions about how to use Rust Sandbox, please direct these to [Sta
 The Rust Sandbox consists of two main projects:
 
 - **api_project**: The backend API, using Rocket.
-- **leptos_project**: The frontend website, developed with Leptos.
+- **rust_htmx_tera_project**: A frontend website, developed with HTMX, Actix and Tera.
 
 ### Environment Setup
 
