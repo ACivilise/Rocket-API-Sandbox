@@ -12,7 +12,8 @@
     <div hx-get="/menu" hx-trigger="load" id="menu-container">
     </div>    
     <div hx-get="/home" hx-trigger="load" id="content-container">
-        {% include "pages/home/index.html" %}
+        <!-- {% include "pages/home/index.html" %} -->        
+        {{ partial_content | safe }}
     </div>
 </body>
 </html>
